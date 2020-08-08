@@ -8,17 +8,11 @@ Reference: [Offboarding Error: Target user \'nnnUser\' already has a primary mai
 
  
 
-**To fix for a single Users:** Do as the reference link writes.
-
- 
-
- 
+**To fix for a single Users:** Do as the reference link writes. 
 
 **To fix for a large group of Users:**
 
- 
-
-\[Example for carentan machine\]
+[Example for carentan machine\]
 
 **1. Connect the onprem machine**
 
@@ -36,8 +30,6 @@ cd C:\\Users\\exo\\Desktop
 
 \$onpremMB \| export-clixml CTAN_onpremMB_0720.xml 
 
- 
-
 **3. Get cloud mailbox and find the dupe**
 
 Open another Powershell window as Admin and run:
@@ -54,8 +46,6 @@ cd C:\\Users\\exo\\Desktop
 
 \$dupes \| Select-Object -Property @{Name=\"dupeMB\";Expression = {\$\_.Name}} \| export-clixml CTAN_dupeMB_0720.xml 
 
- 
-
 for (\$i=0; \$i -lt \$dupes.Count; \$i++)
 
 {
@@ -69,10 +59,6 @@ for (\$i=0; \$i -lt \$dupes.Count; \$i++)
 }
 
 Start-ADSyncSyncCycle
-
- 
-
- 
 
 4\. Note: It will take some time, say 5-10 minutes.
 

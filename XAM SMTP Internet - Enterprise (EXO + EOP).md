@@ -18,8 +18,6 @@ Monitor the path of mail transmission through internet submission of mail to EOP
 
 ![Outside-ln Mailflow - Anonymous Internet Mailflow Monitor Submit a new probe message. EXO XAM (Azure) probe EOP FD (inbound proxy) incoming EXO Cafe (inbound proxy) EXO H ub ](media/image1.png){width="7.59375in" height="1.7708333333333333in"}
 
- 
-
 Each probe execution follows these steps:
 
 1.  Resolve MX of monitoring tenant.
@@ -85,7 +83,6 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 >
 > [Understand Outside-In Class of Failures](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Understand%20Outside-In%20Class%20of%20Failures&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={080E02F8-A55A-4EAC-8701-C909A5D90CA4}&end)
 >
->  
 
 ## Step 2 - Retreive probe smtp sessions from protocol logs
 
