@@ -16,6 +16,8 @@ The customer can run the repair themselves
 
 > This would run the repair beforehand and not cause this to be hit during migrations
 
+Solution:
+
 In the meanwhile, did 2 things to make progress here.
 
 1.  Added the following workaround to disable this
