@@ -43,7 +43,7 @@ The Microsoft Exchange Mailbox Replication service \'SC1P152MB0509.LAMP152.PROD.
 **9/10/2018 12:40:01 PM \[SC1P152MB0509\]**  
 Content from the Shard mailbox (Mailbox Guid: 22220007-8bcb-4f6a-b023-168157c847b7, Database: eeabd74b-395d-4a2f-9a7e-2ea59000de3a) will be merged into the target mailbox.
 
- **9/10/2018 12:40:01 PM \[SC1P152MB0509\]** 
+ **9/10/2018 12:40:01 PM \[SC1P152MB0509\]**  
 Connected to target mailbox \'alphavilleurbanismo.onmicrosoft.com\\938ba0f8-9a45-432c-886b-9554bfe232aa (Primary)\', database \'LAMP152DG032-db055\', Mailbox server \'SC1P152MB0509.LAMP152.PROD.OUTLOOK.COM\' Version 15.20 (Build 1122.0).
 
 **9/10/2018 12:40:03 PM \[SC1P152MB0509\]**  
