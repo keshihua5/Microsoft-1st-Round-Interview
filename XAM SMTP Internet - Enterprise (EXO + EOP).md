@@ -16,10 +16,6 @@ Monitor the path of mail transmission through internet submission of mail to EOP
 
 ## What does the probe do?
 
-Outside-ln Mailflow - Anonymous Internet Mailflow Monitor 
-
-Submit a new probe message.
-
 ![](https://github.com/keshihua5/Microsoft-1st-Round-Interview/blob/master/images/XAM_SMTP.png)
 
 Each probe execution follows these steps:
