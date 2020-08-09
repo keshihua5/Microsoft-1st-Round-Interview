@@ -4,11 +4,6 @@ Monday, September 24, 2018
 
 10:32 AM
 
- 
-
-|      |      |      |
-| ---- | ---- | ---- |
-|      |      |      |
 
 **What triggers the alert?**
 
