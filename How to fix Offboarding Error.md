@@ -34,9 +34,9 @@ Open a Powershell window as Admin and run:
 
 Open another Powershell window as Admin and run:
 
-`cd C:\\Users\\exo\\Desktop`
+​     `cd C:\\Users\\exo\\Desktop`
 
-`. .\\dotsource-exchangeshell.ps1 -onlinesession`
+​     `. .\\dotsource-exchangeshell.ps1 -onlinesession`
 
 `\$gmb = get-mailbox -Resultsize Unlimited \| ?{\$\_.Name -match \'ctantest\'}` 
 
