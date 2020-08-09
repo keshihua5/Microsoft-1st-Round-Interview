@@ -1,10 +1,10 @@
-Disabling IsInteg Check
+# Disabling IsInteg Check
 
 Tuesday, September 11, 2018
 
 9:05 AM
 
-Problem:
+## Problem:
 
 Customer migrations were stuck behind IsInteg not completing and times out after 4 hrs. This was added for MidSet Corruptions so can make sure missing items don\'t happen when the migrations run. Without this, the migrations would happen and towards the end it would fail due to missing items during finalization. It is possible that there is no midset corruptions at all, so skipping this at times may help the user make progress with the moves.
 
@@ -16,7 +16,7 @@ The customer can run the repair themselves
 
 > This would run the repair beforehand and not cause this to be hit during migrations
 
-Solution:
+## Solution:
 
 In the meanwhile, did 2 things to make progress here.
 
@@ -28,23 +28,17 @@ In the meanwhile, did 2 things to make progress here.
 
 2.  Asked the customer to restart the move
 
-9/10/2018 12:39:55 PM \[SC1P152MB0910\] Setting up ISInteg repair run up front for this mailbox since it\'s a large mailbox. \"Primary mailbox size = 14533048984,
-
-                                           Archive mailbox size = 0, Large mailbox size threshold config value = 10737418240
+​                                         9/10/2018 12:39:55 PM \[SC1P152MB0910\] Setting up ISInteg repair run up front for this mailbox since it\'s a large mailbox. \"Primary mailbox size = 14533048984, Archive mailbox size = 0, Large mailbox size threshold config value = 10737418240
 
                                           9/10/2018 12:39:55 PM \[SC1P152MB0910\] \'MigrationService (on behalf of \'\')\' created move request.
 
-                                           9/10/2018 12:39:55 PM \[SC1P152MB0910\] \'MigrationService (on behalf of \'\')\' allowed a large amount of data loss when moving the mailbox (100 bad items, 100 large
-
-                                           items).
+                                           9/10/2018 12:39:55 PM \[SC1P152MB0910\] \'MigrationService (on behalf of \'\')\' allowed a large amount of data loss when moving the mailbox (100 bad items, 100 large items).
 
                                            9/10/2018 12:40:01 PM \[SC1P152MB0509\] The Microsoft Exchange Mailbox Replication service \'SC1P152MB0509.LAMP152.PROD.OUTLOOK.COM\' (15.20.1122.18
 
                                            ServerCaps:01FFFFFF, ProxyCaps:1FFFC7FD6DFDBF5FFFFFCB07EFFF, MailboxCaps:, legacyCaps:01FFFFFF) is examining the request.
 
-                                           9/10/2018 12:40:01 PM \[SC1P152MB0509\] Content from the Shard mailbox (Mailbox Guid: 22220007-8bcb-4f6a-b023-168157c847b7, Database:
-
-                                           eeabd74b-395d-4a2f-9a7e-2ea59000de3a) will be merged into the target mailbox.
+                                           9/10/2018 12:40:01 PM \[SC1P152MB0509\] Content from the Shard mailbox (Mailbox Guid: 22220007-8bcb-4f6a-b023-168157c847b7, Database: eeabd74b-395d-4a2f-9a7e-2ea59000de3a) will be merged into the target mailbox.
 
                                            9/10/2018 12:40:01 PM \[SC1P152MB0509\] Connected to target mailbox \'alphavilleurbanismo.onmicrosoft.com\\938ba0f8-9a45-432c-886b-9554bfe232aa (Primary)\', database
 
