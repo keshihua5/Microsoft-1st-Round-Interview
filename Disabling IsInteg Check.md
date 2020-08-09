@@ -12,9 +12,9 @@ IsInteg is an automatic repair code that was added to fix corruptions in large m
 
 The customer can run the repair themselves
 
--   New-MailboxRepairRequest -CorruptionType MessageId
+`New-MailboxRepairRequest -CorruptionType MessageId`
 
-> This would run the repair beforehand and not cause this to be hit during migrations
+This would run the repair beforehand and not cause this to be hit during migrations
 
 ## Solution:
 
@@ -22,9 +22,9 @@ In the meanwhile, did 2 things to make progress here.
 
 1.  Added the following workaround to disable this
 
-> Set-ExchangeSettings MRS -CreateSettingsGroup -GroupName UnblockAlphaVilleUrbanismo -ConfigPairs @(\"DisableAutomaticRepair=true\") -ScopeFilter \"(MailboxGuid -eq \'938ba0f8-9a45-432c-886b-9554bfe232aa\')\" -reason \"CFL 876974 Fatal error JobStuckPermanentException has occurred\" -ExpirationDate 10/01/2018
+`Set-ExchangeSettings MRS -CreateSettingsGroup -GroupName UnblockAlphaVilleUrbanismo -ConfigPairs @(\"DisableAutomaticRepair=true\") -ScopeFilter \"(MailboxGuid -eq \'938ba0f8-9a45-432c-886b-9554bfe232aa\')\" -reason \"CFL 876974 Fatal error JobStuckPermanentException has occurred\" -ExpirationDate 10/01/2018`
 
-> Set-ExchangeSettings MRS -CreateSettingsGroup -GroupName 1484159UnblockISInteg -ConfigPairs @(\"DisableAutomaticRepair=true\") -ScopeFilter \"(OrganizationName -like \'emiratesfoundationae0.onmicrosoft.com\')\" -reason \"CFL 1484159 Store IsInteg task is pending completion\" -ExpirationDate 06/06/2020
+`Set-ExchangeSettings MRS -CreateSettingsGroup -GroupName 1484159UnblockISInteg -ConfigPairs @(\"DisableAutomaticRepair=true\") -ScopeFilter \"(OrganizationName -like \'emiratesfoundationae0.onmicrosoft.com\')\" -reason \"CFL 1484159 Store IsInteg task is pending completion\" -ExpirationDate 06/06/2020`
 
 2.  Asked the customer to restart the move
 
