@@ -24,8 +24,6 @@ In the meanwhile, did 2 things to make progress here.
 
 > Set-ExchangeSettings MRS -CreateSettingsGroup -GroupName UnblockAlphaVilleUrbanismo -ConfigPairs @(\"DisableAutomaticRepair=true\") -ScopeFilter \"(MailboxGuid -eq \'938ba0f8-9a45-432c-886b-9554bfe232aa\')\" -reason \"CFL 876974 Fatal error JobStuckPermanentException has occurred\" -ExpirationDate 10/01/2018
 
- 
-
 > Set-ExchangeSettings MRS -CreateSettingsGroup -GroupName 1484159UnblockISInteg -ConfigPairs @(\"DisableAutomaticRepair=true\") -ScopeFilter \"(OrganizationName -like \'emiratesfoundationae0.onmicrosoft.com\')\" -reason \"CFL 1484159 Store IsInteg task is pending completion\" -ExpirationDate 06/06/2020
 
 2.  Asked the customer to restart the move
