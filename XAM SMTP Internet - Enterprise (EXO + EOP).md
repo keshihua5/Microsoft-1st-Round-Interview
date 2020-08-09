@@ -44,9 +44,9 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 
 ## Link to OSP
 
-[EXO Dag Scoped (XAM SMTP - Internet)] (https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise&environment=Prod&scope=*.*.*>)
+[EXO Dag Scoped (XAM SMTP - Internet)](https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise&environment=Prod&scope=*.*.*>)
 
-[EOP Forest Scoped (XAM SMTP EOP - Internet)](<https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise%20EOP&environment=Prod&scope=*.*.*)
+[EOP Forest Scoped (XAM SMTP EOP - Internet)](https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise%20EOP&environment=Prod&scope=*.*.*)
 
 ## Diagnose and Recovery
 
@@ -64,7 +64,7 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 
     -   ProbeTimeout - Check if majority of last response is \"250 Recipient OK\" in OSP - EOP FD, EXO Hub
 
-        -   Use \> \"Get-NetworkConfig.ps1 -Server CY1USG02FT013 -PortConnectivity \[2001:489a:2200:408::3\]:25 -ShowConnectionResponse\" to see if the connection can be established and if we can read the banner successfully.
+    -   Use \> \"Get-NetworkConfig.ps1 -Server CY1USG02FT013 -PortConnectivity \[2001:489a:2200:408::3\]:25 -ShowConnectionResponse\" to see if the connection can be established and if we can read the banner successfully.
 
 > Port 25 Connectivity Status: Passed uses 12.803 ms
 >
