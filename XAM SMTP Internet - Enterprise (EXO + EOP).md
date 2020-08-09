@@ -1,10 +1,10 @@
-XAM SMTP Internet - Enterprise (EXO + EOP)
+# XAM SMTP Internet - Enterprise (EXO + EOP)
 
 Monday, October 10, 2016
 
 10:28 AM
 
-# Monitor Goals
+## Monitor Goals
 
 Monitor the path of mail transmission through internet submission of mail to EOP FDs through EXO HUBs. This Probe runs/alerts on the following Scopes:
 
@@ -14,7 +14,7 @@ Monitor the path of mail transmission through internet submission of mail to EOP
 
 3.  **EOP FOREST scoped**: This alerts on a EOP Forest level instead of conventional EXO focused scope. This will include issues faced until EOP FD successfully proxies the incoming mail to EXO HUB.
 
-# What does the probe do?
+## What does the probe do?
 
 ![Outside-ln Mailflow - Anonymous Internet Mailflow Monitor Submit a new probe message. EXO XAM (Azure) probe EOP FD (inbound proxy) incoming EXO Cafe (inbound proxy) EXO H ub ](media/image1.png){width="7.59375in" height="1.7708333333333333in"}
 
@@ -28,11 +28,11 @@ Each probe execution follows these steps:
 
 4.  Submit email to monitoring mailbox.
 
-# What triggers the alert?
+## What triggers the alert?
 
 This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised when the percentage of successful probes in the last hour drops below 97.5% (monitoring profile specific threshold).
 
-# Possible root causes
+## Possible root causes
 
 1.  GLS issue: Cannot attribute mail because GLS is not accessible or monitoring tenant cannot not be found in GLS.
 
@@ -44,15 +44,13 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 
 # Link to OSP
 
-# EXO Dag Scoped (XAM SMTP - Internet): <https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise&environment=Prod&scope=*.*.*> 
+[EXO Dag Scoped (XAM SMTP - Internet)] (https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise&environment=Prod&scope=*.*.*>)
 
- 
-
-**EOP Forest Scoped (XAM SMTP EOP - Internet)**: <https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise%20EOP&environment=Prod&scope=*.*.*>
+[EOP Forest Scoped (XAM SMTP EOP - Internet)](<https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise%20EOP&environment=Prod&scope=*.*.*)
 
 # Diagnose and Recovery
 
-## Step 1 - Determine prominent failure reason (Error Type) and Smtp error responses
+### Step 1 - Determine prominent failure reason (Error Type) and Smtp error responses
 
 -   Check the alert mail table at the bottom to find the major cause of failure (prominent error type) or OSP Page link in email
 
@@ -75,7 +73,7 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 
 -   Prominent failure reasons can be found in the body of the alert email or in OSP. See [Outside-In probe prominent failure reason](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Outside-In%20probe%20prominent%20failure%20reason&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={215D26BD-9788-4816-8DE1-04294A12552C}&end) for more information.
 
-### Mitigation steps and description of each failure reason / error type / smtp response
+Mitigation steps and description of each failure reason / error type / smtp response
 
 > Once you\'ve determined the failure reason / error type, see the following pages for added information on the error type.
 >
@@ -84,7 +82,7 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 > [Understand Outside-In Class of Failures](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Understand%20Outside-In%20Class%20of%20Failures&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={080E02F8-A55A-4EAC-8701-C909A5D90CA4}&end)
 >
 
-## Step 2 - Retreive probe smtp sessions from protocol logs
+### Step 2 - Retreive probe smtp sessions from protocol logs
 
 -   After identifying the major area of failure - pick one error (from OSP) to get the protocol logs
 
