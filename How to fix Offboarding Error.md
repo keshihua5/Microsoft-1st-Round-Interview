@@ -1,14 +1,16 @@
-How to fix Offboarding Error: Target user \'xxx\' already has a primary mailbox
+# How to fix Offboarding Error: Target user \'xxx\' already has a primary mailbox
 
 Monday, July 20, 2020
 
 2:04 PM
 
-**To fix for a single Users:** Do as the reference link writes. 
+## Fix for a single users:  
+
+Do as the reference link writes. 
 
 Reference: [Offboarding Error: Target user \'nnnUser\' already has a primary mailbox](onenote:https://microsoft.sharepoint.com/teams/SRELivesite/Shared%20Documents/%20Migration%20Health%20Infra/Migration%20Health%20Infra/Failure%20Management%20-%20SOPs.one#Offboarding%20Error%20Target%20user%20%27nnnUser%27%20already%20has%20a%20primary&section-id=%7B596DF710-FE29-4DC7-BBF7-874255F6E1B0%7D&page-id=%7BF275AB93-0C47-4B8A-BB2E-2619425BB2D6%7D&end)  ([Web view](https://microsoft.sharepoint.com/teams/SRELivesite/_layouts/OneNote.aspx?id=/teams/SRELivesite/Shared%20Documents/%20Migration%20Health%20Infra/Migration%20Health%20Infra&wd=target%28Failure%20Management%20-%20SOPs.one%7c596DF710-FE29-4DC7-BBF7-874255F6E1B0/Offboarding%20Error:%20Target%20user%20%27nnnUser%27%20already%20has%20a%20primary%7cF275AB93-0C47-4B8A-BB2E-2619425BB2D6/%29))
 
-**To fix for a large group of Users:**
+## Fix for a large group of users:  
 
 [Example for carentan machine\]
 
@@ -60,9 +62,9 @@ Open another Powershell window as Admin and run:
 
 4\. Note: It will take some time, say 5-10 minutes.
 
-You can check by run:
+To check, run:
 
-\`$gmb = get-mailbox -Resultsize Unlimited \| ?{\$\_.Name -match \'ctantest\'}` 
+`\$gmb = get-mailbox -Resultsize Unlimited \| ?{\$\_.Name -match \'ctantest\'}`
 
 `\$dupes = \$gmb \| ?{\$\_.Name -in \$onpremMB.onpremMB}` 
 
@@ -70,6 +72,6 @@ You can check by run:
 
 This should be 0.
 
-If it\'s not gone by then, run the Sync call again, wait, check. Or run the remove-msoluser again
+If it\'s not gone by then, run the `Sync` call again, wait, check. Or run  `remove-msoluser` again.
 
  
