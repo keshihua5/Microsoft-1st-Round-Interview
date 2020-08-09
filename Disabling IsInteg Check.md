@@ -28,7 +28,7 @@ In the meanwhile, did 2 things to make progress here.
 
 2.  Asked the customer to restart the move
 
-                                         9/10/2018 12:39:55 PM \[SC1P152MB0910\] Setting up ISInteg repair run up front for this mailbox since it\'s a large mailbox. \"Primary mailbox size = 14533048984, Archive mailbox size = 0, Large mailbox size threshold config value = 10737418240
+                                          9/10/2018 12:39:55 PM \[SC1P152MB0910\] Setting up ISInteg repair run up front for this mailbox since it\'s a large mailbox. \"Primary mailbox size = 14533048984, Archive mailbox size = 0, Large mailbox size threshold config value = 10737418240
 
                                           9/10/2018 12:39:55 PM \[SC1P152MB0910\] \'MigrationService (on behalf of \'\')\' created move request.
 
