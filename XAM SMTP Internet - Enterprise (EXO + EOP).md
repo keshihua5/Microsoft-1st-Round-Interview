@@ -42,13 +42,13 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 
 4.  Transport issues: EOP FD, EXO Café or hub are too busy or in a bad state (i.e. crashing), or code bug in any of these transport components.
 
-# Link to OSP
+## Link to OSP
 
 [EXO Dag Scoped (XAM SMTP - Internet)] (https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise&environment=Prod&scope=*.*.*>)
 
 [EOP Forest Scoped (XAM SMTP EOP - Internet)](<https://o365pulse.office.net/enterprisedashboard?probe=SMTP%20Internet%20-%20Enterprise%20EOP&environment=Prod&scope=*.*.*)
 
-# Diagnose and Recovery
+## Diagnose and Recovery
 
 ### Step 1 - Determine prominent failure reason (Error Type) and Smtp error responses
 
@@ -96,7 +96,7 @@ Mitigation steps and description of each failure reason / error type / smtp resp
 
 -   Help for using the script: [Get a XAM Probe\'s Protocol logs](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Get%20a%20XAM%20Probe's%20Protocol%20logs&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={E7C6A793-74A3-42BB-94CA-D07C3FD96425}&end)
 
-# Diagnose Eop Only issues
+## Diagnose Eop Only issues
 
 Smtp Internet - Enterprise workflow starts an SMTP conversation with EOP Fd in a sequence. EOP FD sets up a proxy connection to EXO Café and proxies the SMTP commands on BDAT.
 
