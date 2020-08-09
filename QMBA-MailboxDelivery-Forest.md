@@ -42,44 +42,40 @@ A Geneva dashboard providing current and recent historical views of this data by
 
     d.  You can refer this playbook([HttpDeliveryAvailabilityV2Monitor](onenote:#HttpDeliveryAvailabilityV2Monitor&section-id={F0A9DD2C-8D88-4246-9561-12B4E91CFA0A}&page-id={AF6CA10D-662C-41AA-B2F0-6E94B741AFAC}&end&base-path=https://microsoft.sharepoint-df.com/teams/O365TransportTeam/SiteAssets/O365%20Transport%20Team%20Notebook/Alert%20Playbook.one)) to diagnose single delivery issue.
 
-```{=html}
-<!-- -->
-```
-1.  In **ITAR** environment, Diagnose-QRBA.ps1 can\'t be ran, please ask Escort run below two commands to find hot delivery server.
+3. In **ITAR** environment, Diagnose-QRBA.ps1 can\'t be ran, please ask Escort run below two commands to find hot delivery server.
 
-  Get-QueueDiversityV2 -forest //It will list top target mdb-\> \$mdbGuid
-  -------------------------------------------------------------------------
-  Get-MailboxDatabase \$mdbGuid //Find where this mdb mounted
+   `Get-QueueDiversityV2 -forest //It will list top target mdb-\> \$mdbGuid`
 
-4.  Check Geneva dashboard, in the \"Top Machines\" chart which is the top queued hub server, if top machine\'s queued message count is close to forest queued messages count, we can say this is hot hub issue.
+   `Get-MailboxDatabase \$mdbGuid //Find where this mdb mounted`
 
-    a.  Get last error of queue messages. You can know why messages were deferred in the delivery queue.
+4. Check Geneva dashboard, in the \"Top Machines\" chart which is the top queued hub server, if top machine\'s queued message count is close to forest queued messages count, we can say this is hot hub issue.
 
-  \$q = get-queue -Server BN3PR00MB0178 -Filter \"DeliveryType -eq \'HttpDeliveryToExo\'\"
-  ------------------------------------------------------------------------------------------
-  \$msg= get-message -Queue \$q.Identity
-  \$msg.LastError
+   a.  Get last error of queue messages. You can know why messages were deferred in the delivery queue.
 
-b.  Please download **HubTransportHttpSendLogsHourly** in hub server to check more detail for the last error.
+   `$q = get-queue -Server BN3PR00MB0178 -Filter \"DeliveryType -eq \'HttpDeliveryToExo`
 
----------------------------------------------------------------------
-  Get-MachineLog -target \$server -Log HubTransportHttpSendLogsHourly
-  ---------------------------------------------------------------------
+   `$msg= get-message -Queue \$q.Identity`
 
-c.  Restart MSExchangeTransport to mitigate first.
+   `$msg.LastError`
 
-----------------------------------------------------------------------------------------------------------------
-  Request-RestartService_V2.ps1 **-Target** \$server **-ServiceName** MSExchangeTransport **-Reason** \"reason\"
-  ----------------------------------------------------------------------------------------------------------------
+   b.  Please download **HubTransportHttpSendLogsHourly** in hub server to check more detail for the last error.
 
-5.  If neither hot delivery nor hot hub.
+   `Get-MachineLog -target \$server -Log HubTransportHttpSendLogsHourly`
 
-> There may some special messages have some pattern got queued.
+   c.  Restart MSExchangeTransport to mitigate first.
 
-a.  Check messages that queued in delivery queue, check last error to see these queued messages have some pattern or not.
+   `Request-RestartService_V2.ps1 **-Target** \$server **-ServiceName**` 
 
--------------------------------------------------------------------------------------------------------------------------------------
-  Get-QueueDiversityV2 -Forest -Priority normal -QueueFilter {DeliveryType -eq \'HttpDeliveryToExo\'} -MinMessageLatency \"01:00:00\"
-  -------------------------------------------------------------------------------------------------------------------------------------
+   `MSExchangeTransport **-Reason** \"reason\"`
 
-b.  Check delivery hang dashboard(<https://jarvis-west.dc.ad.msft.net/dashboard/O365_Transport/MailboxTransport/Delivery/DeliveryHangException>), to see in the alerting forest delivery hang status, if hang exception increasing a lot, it may cause other normal messages queued. Please engage other team based on hang call stack. Mitigation action maybe drop the messages that cause delivery hang, you can check the message id to find message\'s common pattern.
+5. If neither hot delivery nor hot hub.
+
+   There may some special messages have some pattern got queued.
+
+   a.  Check messages that queued in delivery queue, check last error to see these queued messages have some pattern or not.
+
+   `Get-QueueDiversityV2 -Forest -Priority normal -QueueFilter {DeliveryType -eq \'HttpDeliveryToExo\'} -MinMessageLatency \"01:00:00\"`
+
+   b.  Check delivery [hang dashboard](<https://jarvis-west.dc.ad.msft.net/dashboard/O365_Transport/MailboxTransport/Delivery/DeliveryHangException>), to see in the alerting forest delivery hang status, if hang exception increasing a lot, it may cause other normal messages queued. 
+
+   Please engage other team based on hang call stack. Mitigation action maybe drop the messages that cause delivery hang, you can check the message id to find message\'s common pattern.
