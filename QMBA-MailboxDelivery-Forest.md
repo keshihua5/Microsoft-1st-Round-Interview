@@ -32,16 +32,16 @@ A **Geneva dashboard** (which provides current and recent historical views of th
 
 ## Possible Root Causes
 
-1.  Hot delivery, single delivery server has an issue.  
+1.  **Hot delivery, single delivery server has an issue.**  
     All queued messages target the same delivery server.
 
-2.  Hot hub, single hub server cannot send messages; probable **Auth** issue.  
+2.  **Hot hub, single hub server cannot send messages; probable Auth issue.**  
     All queued messages are in the same hub server.
 
-3.  Scattered hub and scattered delivery.  
+3.  **Scattered hub and scattered delivery.**  
     Some  messages have  patterns queued.
 
-4.  Networking failure, café failure.
+4.  **Networking failure, café failure**.
 
 ## Diagnose and Recover
 
