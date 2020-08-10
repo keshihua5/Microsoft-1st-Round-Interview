@@ -84,10 +84,10 @@ This monitor targets a specific **Dag/EXO forest/EOP orest**. An alert is raised
      - UnableToConnect - Azure and EOP FD
      - ReplicationFailure - EXO Hub
      - ProxyDnsFailure - EOP FD, EXO Café
-     - ProbeTimeout - Check if majority of last response is \"250 Recipient OK\" in OSP - EOP FD, EXO Hub
+     - ProbeTimeout - Check if majority of last response is \"**250 Recipient OK**\" in OSP - EOP FD, EXO Hub
        - Use **`> Get-NetworkConfig.ps1 -Server CY1USG02FT013 -PortConnectivity \[2001:489a:2200:408::3\]:25 -ShowConnectionResponse`** to see if the connection can be established and if the banner can be read successfully.  
          **Port 25 Connectivity Status: Passed uses 12.803 ms  
-         Can\'t get remote side answer**.
+         Cannot get remote side answer**.
 
    - Prominent failure reasons can be found in the body of the alert email or in OSP.  
 See [Outside-In probe prominent failure reason](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Outside-In%20probe%20prominent%20failure%20reason&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={215D26BD-9788-4816-8DE1-04294A12552C}&end) for more information.
