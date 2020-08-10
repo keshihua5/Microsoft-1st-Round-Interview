@@ -6,7 +6,7 @@ Tuesday, September 11, 2018
 
 ## Problem:
 
-**Customer migrations stalled due to IsInteg not completing and times out after 4 hrs.**
+#### **Customer migrations stalled due to IsInteg not completing and times out after 4 hrs.**
 
 **IsInteg** is an automatic repair code that fixes corruption in large mailboxes. Auto repair could take a long time. 
 
