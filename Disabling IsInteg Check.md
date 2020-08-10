@@ -4,6 +4,16 @@ Tuesday, September 11, 2018
 
 9:05 AM
 
+------
+
+**Contents**
+
+[Problem(s)](#problem(s))
+
+[Solution(s)](#solution(s))
+
+------
+
 ## Problem(s):
 
 - Customer migrations stalled due to **IsInteg not completing** and **timing out** after four hrs.
