@@ -4,6 +4,8 @@ Monday, September 24, 2018
 
 10:32 AM
 
+------
+
 **Table of Contents**
 
 [What Triggers The Alert](#what-triggers-the-alert)

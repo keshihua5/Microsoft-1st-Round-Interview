@@ -4,6 +4,8 @@ Monday, October 10, 2016
 
 10:28 AM
 
+------
+
 **Table of Contents**
 
 [Monitor Goals](#monitor-goals)
