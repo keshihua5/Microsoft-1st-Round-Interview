@@ -10,9 +10,9 @@ Monday, October 10, 2016
 
 [Monitor Goals](#monitor-goals)
 
-[What Does The Probe Do?](#what-does-the-probe-do?)
+[What Does The Probe Do?](#what-does-the-probe-do)
 
-[What Triggers The Alert?](#what-triggers-the-alert-?)
+[What Triggers The Alert?](#what-triggers-the-alert)
 
 [Possible Root Causes](#possible-root-causes)
 
