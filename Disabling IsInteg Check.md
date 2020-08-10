@@ -6,19 +6,23 @@ Tuesday, September 11, 2018
 
 ## Problem:
 
-IsInteg is an automatic repair code that was added to fix corruptions in large mailboxes. Auto repair could take a long time. Not sure how long we wait/make it best effort.
+**Customer migrations stalled due to IsInteg not completing and times out after 4 hrs.**
 
-Customer migrations were stuck behind IsInteg not completing and times out after 4 hrs. This was added for MidSet Corruptions so can make sure missing items don\'t happen when the migrations run. Without this, the migrations would happen and towards the end it would fail due to missing items during finalization. It is possible that there is no midset corruptions at all, so skipping this at times may help the user make progress with the moves.
+**IsInteg** is an automatic repair code that fixes corruption in large mailboxes. Auto repair could take a long time. 
 
-The customer can run the repair themselves
+IsInteg was added for **MidSet Corruptions** to ensure missing items do not occur when running migrations. Without using IsInteg, the migrations continue and fail due to missing items during finalization. 
+
+ If there are no midset corruptions, skipping IsInteg  may help improve performance.
+
+Customers can run the repair as follows:
 
 `New-MailboxRepairRequest -CorruptionType MessageId`
 
-This would run the repair beforehand and not cause this to be hit during migrations
+This would run the repair beforehand and not cause it to be hit during migrations
 
 ## Solution:
 
-In the meanwhile, did 2 things to make progress here.
+The problem was resolved as follows.
 
 - Added the following workaround to disable this
 
@@ -26,7 +30,7 @@ In the meanwhile, did 2 things to make progress here.
 
   `Set-ExchangeSettings MRS -CreateSettingsGroup -GroupName 1484159UnblockISInteg -ConfigPairs @(\"DisableAutomaticRepair=true\") -ScopeFilter \"(OrganizationName -like \'emiratesfoundationae0.onmicrosoft.com\')\" -reason \"CFL 1484159 Store IsInteg task is pending completion\" -ExpirationDate 06/06/2020`
 
-- Asked the customer to restart the move
+- Asked the customer to restart the move. See the following log:
 
   **9/10/2018 12:39:55 PM \[SC1P152MB0910\]**  
   Setting up ISInteg repair run up front for this mailbox since it\'s a large mailbox. \"Primary mailbox size = 14533048984, Archive mailbox size = 0, Large mailbox size threshold config value = 10737418240
