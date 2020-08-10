@@ -14,11 +14,11 @@ Monday, July 20, 2020
 
 [Example for carentan machine\]
 
-1. Connect the onprem machine
+1. Connect the on-prem machine
 
-2. Get onprem mailbox
+2. Get on-prem mailbox
 
-   Open a Powershell window as Admin and run:
+   Open a Powershell window as Admin, and run:
 
    `cd C:\\Users\\exo\\Desktop`
 
@@ -32,7 +32,7 @@ Monday, July 20, 2020
 
 3. Get cloud mailbox and find the dupe
 
-   Open another Powershell window as Admin and run:
+   Open another Powershell window as Admin, and run:
 
     `cd C:\\Users\\exo\\Desktop`
 
@@ -62,7 +62,7 @@ Monday, July 20, 2020
 
    `Start-ADSyncSyncCycle`
 
-4. Note: It will take some time, say 5-10 minutes.
+4. Note: It will take approximately 5-10 minutes.
 
    To check, run:
 
@@ -74,7 +74,7 @@ Monday, July 20, 2020
 
    This should be 0.
 
-   If it\'s not gone by then, run the `Sync` call again, wait and check. 
+   If it is not gone by then, run the `Sync` call again, wait and check. 
 
    Or run  `remove-msoluser` again.
 
