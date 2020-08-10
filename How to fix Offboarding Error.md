@@ -22,7 +22,7 @@ Reference: [Offboarding Error: Target user \'nnnUser\' already has a primary mai
 
    `cd C:\\Users\\exo\\Desktop`
 
-   ``. .\\dotsource-exchangeshell.ps1 -onpremsession`
+   `. .\\dotsource-exchangeshell.ps1 -onpremsession`
 
    `\$gmb = get-mailbox -Resultsize Unlimited \| ?{\$\_.Name -match \'ctantest\'}`
 
