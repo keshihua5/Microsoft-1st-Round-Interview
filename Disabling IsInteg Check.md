@@ -4,7 +4,7 @@ Tuesday, September 11, 2018
 
 9:05 AM
 
-## Problem:
+## Problem(s):
 
 - Customer migrations stalled due to **IsInteg not completing** and **timing out** after four hrs.
 
@@ -20,7 +20,7 @@ Tuesday, September 11, 2018
 
   This would run the repair beforehand and not cause it to be hit during migrations
 
-## Solution:
+## Solution(s):
 
 The problem was resolved as follows.
 
