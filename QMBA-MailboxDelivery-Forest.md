@@ -6,9 +6,11 @@ Monday, September 24, 2018
 
 **Table of Contents**
 
-[What Triggers The Alert]: #what-triggers-the-alert
-[Possible Root Causes]: #possible-root-causes
-[Diagnose and Recover]: #diagnose-and-recover
+[What Triggers The ALERT](#what-triggers-the-alert)
+
+[Possible Root Causes](#possible-root-causes)
+
+[Diagnose and Recover](#diagnose-and-recover)
 
 ------
 
