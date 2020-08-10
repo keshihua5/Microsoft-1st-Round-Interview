@@ -18,11 +18,11 @@ Reference: [Offboarding Error: Target user \'nnnUser\' already has a primary mai
 
 **2. Get onprem mailbox**
 
-​     Open a Powershell window as Admin and run:
+​		Open a Powershell window as Admin and run:
 
-​     `cd C:\\Users\\exo\\Desktop`
+​		  `cd C:\\Users\\exo\\Desktop``
 
-​    `. .\\dotsource-exchangeshell.ps1 -onpremsession`
+​		`. .\\dotsource-exchangeshell.ps1 -onpremsession`
 
 `\$gmb = get-mailbox -Resultsize Unlimited \| ?{\$\_.Name -match \'ctantest\'}` 
 
