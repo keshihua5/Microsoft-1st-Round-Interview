@@ -6,7 +6,7 @@ Monday, October 10, 2016
 
 ------
 
-**Table of Contents**
+**Contents**
 
 [Monitor Goals](#monitor-goals)
 
