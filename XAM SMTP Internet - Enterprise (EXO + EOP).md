@@ -113,9 +113,9 @@ See [Outside-In probe prominent failure reason](onenote:https://msft.spoppe.com/
 
 Smtp Internet - Enterprise workflow starts an SMTP conversation with EOP Fd in a sequence. EOP FD sets up a proxy connection to EXO Café and proxies the SMTP commands on BDAT.
 
-Issues **pre** BDAT command are specifically EOP Only issues.
+Issues **pre** BDAT command are specifically EOP only issues.
 
-Issues **post** BDAT command can be differentiated between Eop, and Exo related:
+Issues **post** BDAT command can be differentiated between EOP, and EXO related:
 
 -   **EOP related issues**.  
     Setting up a proxy (Error Type PROXYDNSFAILURE)
