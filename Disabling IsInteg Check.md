@@ -8,9 +8,9 @@ Tuesday, September 11, 2018
 
 **Contents**
 
-[Problem(s)](#problem(s))
+[Problem(s)](#problems)
 
-[Solution(s)](#solution(s))
+[Solution(s)](#solutions)
 
 ------
 
