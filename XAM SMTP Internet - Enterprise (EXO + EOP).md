@@ -26,7 +26,7 @@ Monday, October 10, 2016
 
 ## Monitor Goals
 
-Monitor the path of mail transmission through internet submission of mail to EOP FDs through EXO HUBs. This Probe runs/alerts on the following Scopes:
+Monitor the path of mail transmission through internet submission of mail to EOP FDs through EXO HUBs. This probe runs/alerts on the following scopes:
 
 - **EXO Dag scoped**:  
   This alerts on a Dag level when availability goes down.
@@ -35,13 +35,13 @@ Monitor the path of mail transmission through internet submission of mail to EOP
   A System wide Incident/Red Alert is issued when across a forest availability dips for any reason.
 
 - **EOP FOREST scoped**  
-  This alerts on a EOP Forest level instead of conventional EXO focused scope. This will include issues faced until EOP FD successfully proxies the incoming mail to EXO HUB.
+  This alerts on a EOP Forest-level instead of conventional EXO focused scope. It includes issues faced until EOP FD successfully proxies the incoming mail to EXO HUB.
 
 ## What Does The Probe Do?
 
 ![XAM_SMTP](/Users/keshihua/Desktop/Microsoft-1st-Round-Interview/images/XAM_SMTP.png)
 
-Each probe execution follows these steps:
+Each probe execution does the following these steps:
 
 1.  Resolve MX of monitoring tenant.
 
@@ -57,13 +57,17 @@ This monitor targets a specific Dag/Exo forest/Eop Forest. An alert is raised wh
 
 ## Possible Root Causes
 
-1.  GLS issue: Cannot attribute mail because GLS is not accessible or monitoring tenant cannot not be found in GLS.
+1.  GLS issue.  
+    Cannot attribute mail because GLS is not accessible or monitoring tenant cannot not be found in GLS.
 
-2.  Networking issue: Cannot resolve tenant\'s MX (DNS++ issue), VIP not configured correctly, connectivity issues between Azure instance, EOP FD, EXO Café and/or EXO hub, etc.
+2.  Networking issue.  
+    Cannot resolve tenant\'s MX (DNS++ issue), VIP not configured correctly, connectivity issues between Azure instance, EOP FD, EXO Café and/or EXO hub, etc.
 
-3.  Certificate issues: wrong or expired certificate, monitoring mailbox not provisioned/configured correctly.
+3.  Certificate issues.  
+    Wrong or expired certificate, monitoring mailbox not provisioned/configured correctly.
 
-4.  Transport issues: EOP FD, EXO Café or hub are too busy or in a bad state (i.e. crashing), or code bug in any of these transport components.
+4.  Transport issues.  
+    EOP FD, EXO Café or hub are too busy or in a bad state (i.e. crashing), or code bug in any of these transport components.
 
 ## Link To OSP
 

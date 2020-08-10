@@ -32,17 +32,20 @@ A **Geneva dashboard** (which provides current and recent historical views of th
 
 ## Possible Root Causes
 
-1.  Hot delivery, single delivery server has an issue. All queued messages target the same delivery server.
+1.  Hot delivery, single delivery server has an issue.  
+    All queued messages target the same delivery server.
 
-2.  Hot hub, single hub server cannot send messages; probable **Auth** issue. All queued messages are in the same hub server.
+2.  Hot hub, single hub server cannot send messages; probable **Auth** issue.  
+    All queued messages are in the same hub server.
 
-3.  Scattered hub and scattered delivery. Some  messages have  patterns queued.
+3.  Scattered hub and scattered delivery.  
+    Some  messages have  patterns queued.
 
 4.  Networking failure, café failure.
 
 ## Diagnose and Recover
 
-1.  Once you receive alert, open the [QMBA dash board link](https://jarvis-west.dc.ad.msft.net/dashboard/share/91E7368C?overrides=%5b%7b%22query%22:%22//*%5bid='Environment'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Region'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Forest'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='AvailabilityGroup'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Machine'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d%5d%20) to get the latest queue status. Change this alert\'s urgency to **Sev3** in alerting forest while you are investigating.
+1.  Once you receive an alert, open the [QMBA dash board link](https://jarvis-west.dc.ad.msft.net/dashboard/share/91E7368C?overrides=%5b%7b%22query%22:%22//*%5bid='Environment'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Region'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Forest'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='AvailabilityGroup'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Machine'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d%5d%20) to get the latest queue status. Change this alert urgency to **Sev3**  while you are investigating.
 
 2.  Run Transport on-call script **`Diagnose-QRBA.ps1`**.
 
@@ -61,7 +64,7 @@ A **Geneva dashboard** (which provides current and recent historical views of th
 
    `Get-MailboxDatabase \$mdbGuid //Find where this mdb mounted`
 
-4. Check the Geneva dashboard **Top Machines** chart (which is the top queued hub server). if top machine\'s queued message count is close to forest queued messages count, this is a hot hub issue.
+4. Check the Geneva dashboard **Top Machines** chart (which is the top queued hub server). If top machine queued message count is close to forest queued messages count, this is a hot hub issue.
 
    a.  Review last error of queue messages to know why messages were deferred in the delivery queue.
 
@@ -71,7 +74,7 @@ A **Geneva dashboard** (which provides current and recent historical views of th
 
    `$msg.LastError`
 
-   b.  Download **`HubTransportHttpSendLogsHourly`** in hub server to check for more detail.
+   b.  Download **`HubTransportHttpSendLogsHourly`** in hub server to check for more details.
 
    `Get-MachineLog -target \$server -Log HubTransportHttpSendLogsHourly`
 
@@ -85,12 +88,13 @@ A **Geneva dashboard** (which provides current and recent historical views of th
 
    Some special messages may have patterns queued.
 
-   a.  Check messages in the delivery queue; check the last error to see if queued messages have patterns .
-
-   `Get-QueueDiversityV2 -Forest -Priority normal -QueueFilter {DeliveryType -eq \'HttpDeliveryToExo\'} -MinMessageLatency \"01:00:00\"`
-
-   b.  Check delivery [hang dashboard](<https://jarvis-west.dc.ad.msft.net/dashboard/O365_Transport/MailboxTransport/Delivery/DeliveryHangException>), to see in the alerting forest delivery hang status, if hang exception increasing a lot, it may cause other normal messages queued. 
-
+   a.  Check messages in the delivery queue.  
+Check the last error to see if queued messages have patterns .
+   
+`Get-QueueDiversityV2 -Forest -Priority normal -QueueFilter {DeliveryType -eq \'HttpDeliveryToExo\'} -MinMessageLatency \"01:00:00\"`
+   
+b.  Check delivery [hang dashboard](<https://jarvis-west.dc.ad.msft.net/dashboard/O365_Transport/MailboxTransport/Delivery/DeliveryHangException>), to see in the alerting forest delivery hang status. If hang exception increases a lot, it may cause other normal messages to queue. 
+   
    Contact another team based on hang call stack. Mitigation maybe drop messages that cause the delivery to hang.
    
    Check the **message id** to find message-common patterns.

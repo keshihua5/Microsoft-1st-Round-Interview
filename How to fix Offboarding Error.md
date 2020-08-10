@@ -27,9 +27,9 @@ Monday, July 20, 2020
 > Note This example is for a carentan machine\.
 >
 
-1. Connect the on-prem machine
+1. Connect the on-prem machine.
 
-2. Get on-prem mailbox
+2. Get on-prem mailbox.
 
    Open a Powershell window as Admin, and run the following:
 
@@ -43,7 +43,7 @@ Monday, July 20, 2020
 
    `\$onpremMB \| export-clixml CTAN_onpremMB_0720.xml`
 
-3. Get cloud mailbox and find the dupe
+3. Get cloud mailbox and find the dupe.
 
    Open another Powershell window as Admin, and run the following:
 
