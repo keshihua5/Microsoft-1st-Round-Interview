@@ -16,7 +16,7 @@ A Geneva dashboard providing current and recent historical views of this data by
 
 [QMBA dash board link](https://jarvis-west.dc.ad.msft.net/dashboard/share/91E7368C?overrides=%5b%7b%22query%22:%22//*%5bid='Environment'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Region'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Forest'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='AvailabilityGroup'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d,%7b%22query%22:%22//*%5bid='Machine'%5d%22,%22key%22:%22value%22,%22replacement%22:%22%22%7d%5d%20)
 
-![](https://github.com/keshihua5/Microsoft-1st-Round-Interview/blob/master/images/qmba.png)
+![qmba](/Users/keshihua/Desktop/microsoft interview docs/qmba.png)
 
 ## Possible root causes
 
