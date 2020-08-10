@@ -6,19 +6,19 @@ Tuesday, September 11, 2018
 
 ## Problem:
 
-#### **Customer migrations stalled due to IsInteg not completing and times out after 4 hrs.**
+- Customer migrations stalled due to **IsInteg not completing** and **timing out** after four hrs.
 
-**IsInteg** is an automatic repair code that fixes corruption in large mailboxes. Auto repair could take a long time. 
+  **IsInteg** is an automatic repair code that fixes corruption in large mailboxes. Auto repair could take a long time. 
 
-IsInteg was added for **MidSet Corruptions** to ensure missing items do not occur when running migrations. Without using IsInteg, the migrations continue and fail due to missing items during finalization. 
+  IsInteg was added for **MidSet Corruptions** to ensure missing items do not occur when running migrations. Without using IsInteg, the migrations continue and fail due to missing items during finalization. 
 
- If there are no midset corruptions, skipping IsInteg  may help improve performance.
+   If there are no midset corruptions, skipping IsInteg  may help improve performance.
 
-Customers can run the repair as follows:
+  Customers can run the repair as follows:
 
-`New-MailboxRepairRequest -CorruptionType MessageId`
+  `New-MailboxRepairRequest -CorruptionType MessageId`
 
-This would run the repair beforehand and not cause it to be hit during migrations
+  This would run the repair beforehand and not cause it to be hit during migrations
 
 ## Solution:
 
