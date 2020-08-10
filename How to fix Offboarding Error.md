@@ -20,7 +20,7 @@ Reference: [Offboarding Error: Target user \'nnnUser\' already has a primary mai
 
    Open a Powershell window as Admin and run:
 
-   `cd C:\\Users\\exo\\Desktop````
+   `cd C:\\Users\\exo\\Desktop`
 
    ``. .\\dotsource-exchangeshell.ps1 -onpremsession`
 
