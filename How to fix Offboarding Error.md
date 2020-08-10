@@ -1,4 +1,6 @@
-# How to fix Offboarding Error:  Target user \'xxx\' already has a primary mailbox
+# How To Fix Offboarding Error:
+
+### Target user \'xxx\' already has a primary mailbox
 
 Monday, July 20, 2020
 
