@@ -6,9 +6,9 @@ Tuesday, September 11, 2018
 
 ## Problem:
 
-Customer migrations were stuck behind IsInteg not completing and times out after 4 hrs. This was added for MidSet Corruptions so can make sure missing items don\'t happen when the migrations run. Without this, the migrations would happen and towards the end it would fail due to missing items during finalization. It is possible that there is no midset corruptions at all, so skipping this at times may help the user make progress with the moves.
-
 IsInteg is an automatic repair code that was added to fix corruptions in large mailboxes. Auto repair could take a long time. Not sure how long we wait/make it best effort.
+
+Customer migrations were stuck behind IsInteg not completing and times out after 4 hrs. This was added for MidSet Corruptions so can make sure missing items don\'t happen when the migrations run. Without this, the migrations would happen and towards the end it would fail due to missing items during finalization. It is possible that there is no midset corruptions at all, so skipping this at times may help the user make progress with the moves.
 
 The customer can run the repair themselves
 
