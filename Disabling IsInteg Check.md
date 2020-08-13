@@ -20,7 +20,7 @@ Tuesday, September 11, 2018
 
   **IsInteg** is an automatic repair code that fixes corruption in large mailboxes. Auto repair could take a long time. 
 
-  IsInteg was added for **MidSet Corruptions** to ensure missing items do not occur when running migrations. Without using IsInteg, the migrations continue and fail due to missing items during finalization. 
+  IsInteg is added for **MidSet Corruptions** to ensure missing items do not occur when running migrations. Without using IsInteg, the migrations continue and fail due to missing items during finalization. 
 
    If there are no midset corruptions, skipping IsInteg may help improve performance.
 
