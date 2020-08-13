@@ -45,7 +45,7 @@ Each probe executes the following steps:
 
 1.  Resolve MX of monitoring tenant.
 
-2.  Connect to monitoring tenant\'s MX host (this should resolve to an EOP FD).
+2.  Connect to monitoring tenant MX host (this should resolve to an EOP FD).
 
 3.  Negotiate an SSL connection.
 
@@ -61,7 +61,7 @@ This monitor targets a specific **Dag/EXO forest/EOP orest**. An alert is raised
     Cannot attribute mail because GLS is not accessible or monitoring tenant cannot not be found in GLS.
 
 2.  **Networking issue.**  
-    Cannot resolve tenant\'s MX (DNS++ issue), VIP not configured correctly, connectivity issues between Azure instance, EOP FD, EXO Café and/or EXO hub, etc.
+    Cannot resolve tenant MX (DNS++ issue), VIP not configured correctly, connectivity issues between Azure instance, EOP FD, EXO Café and/or EXO hub, etc.
 
 3.  **Certificate issues.**  
     Wrong or expired certificate, monitoring mailbox not provisioned/configured correctly.
@@ -107,7 +107,7 @@ See [Outside-In probe prominent failure reason](onenote:https://msft.spoppe.com/
 
    - Use On-call script to diagnose the logs
 
-   - Help for using the script: [Get a XAM Probe\'s Protocol logs](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Get%20a%20XAM%20Probe's%20Protocol%20logs&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={E7C6A793-74A3-42BB-94CA-D07C3FD96425}&end)
+   - Help for using the script: [Get a XAM Probe Protocol logs](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Get%20a%20XAM%20Probe's%20Protocol%20logs&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={E7C6A793-74A3-42BB-94CA-D07C3FD96425}&end)
 
 ## Diagnose EOP Issues Only
 
