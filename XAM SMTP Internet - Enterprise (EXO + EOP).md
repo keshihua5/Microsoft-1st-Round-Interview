@@ -39,7 +39,7 @@ Monitor the path of mail transmission through internet submission of mail to EOP
 
 ## What Does The Probe Do?
 
-![XAM_SMTP](/Users/keshihua/Desktop/Microsoft-1st-Round-Interview/images/XAM_SMTP.png)
+![XAM_SMTP](images/XAM_SMTP.png)
 
 Each probe executes the following steps:
 
