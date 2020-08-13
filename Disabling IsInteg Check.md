@@ -32,7 +32,7 @@ Tuesday, September 11, 2018
 
 ## Solution(s):
 
-The problem was resolved as follows.
+The problem was resolved as follows:
 
 - Added the following workaround to disable this
 
