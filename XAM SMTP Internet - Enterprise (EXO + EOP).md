@@ -57,16 +57,16 @@ This monitor targets a specific **Dag/EXO forest/EOP orest**. An alert is raised
 
 ## Possible Root Causes
 
-1.  **GLS issue.**  
+1.  **GLS issue**  
     Cannot attribute mail because GLS is not accessible or monitoring tenant cannot not be found in GLS.
 
-2.  **Networking issue.**  
+2.  **Networking issue**  
     Cannot resolve tenant MX (DNS++ issue), VIP not configured correctly, connectivity issues between Azure instance, EOP FD, EXO Café and/or EXO hub, etc.
 
-3.  **Certificate issues.**  
+3.  **Certificate issues**  
     Wrong or expired certificate, monitoring mailbox not provisioned/configured correctly.
 
-4.  **Transport issues.**  
+4.  **Transport issues**  
     EOP FD, EXO Café or hub are too busy or in a bad state (i.e., crashing/hanging), or there is a  code bug in any of these transport components.
 
 ## Link To OSP
@@ -92,12 +92,14 @@ This monitor targets a specific **Dag/EXO forest/EOP orest**. An alert is raised
    - Prominent failure reasons can be found in the body of the alert email or in OSP.  
 See [Outside-In probe prominent failure reason](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Outside-In%20probe%20prominent%20failure%20reason&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={215D26BD-9788-4816-8DE1-04294A12552C}&end) for more information.
      
-**Mitigation steps and description of each failure reason / error type / smtp response**.  Once you\'ve determined the failure reason / error type, see the following pages for added information on the error type.
+
+**Mitigation steps and description of each failure reason / error type / smtp response**.  
+Once you\'ve determined the failure reason / error type, see the following pages for added information on the error type.
      
 [Common Outside In SMTP Probe Failures](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/E15%20Alert%20Playbook.one#Common%20Outside%20In%20SMTP%20Probe%20Failures&section-id={24B57828-2A06-42C5-99C0-37E103E281E0}&page-id={BA12E5C0-D8F3-49F8-ACB4-D55F08B53513}&end)
      
 [Understand Outside-In Class of Failures](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Understand%20Outside-In%20Class%20of%20Failures&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={080E02F8-A55A-4EAC-8701-C909A5D90CA4}&end)
-   
+
 2. Retreive probe smtp sessions from protocol logs,
 
    - After identifying the major failure areas, choose one error (from OSP) to get the protocol logs
@@ -117,13 +119,13 @@ Issues **pre** BDAT command are specifically EOP only issues.
 
 Issues **post** BDAT command can be differentiated between EOP, and EXO related:
 
--   **EOP related issues**.  
+-   **EOP related issues**  
     Setting up a proxy (Error Type PROXYDNSFAILURE)
 
--   **EXO related issues.**  
+-   **EXO related issues**  
      Hub server busy/replication failure
 
--   **EOP/EXO only issues.**  
+-   **EOP/EXO only issues**  
     To further identify EOP/EXO only issues, do the following steps
 
     1. Go to OSP.

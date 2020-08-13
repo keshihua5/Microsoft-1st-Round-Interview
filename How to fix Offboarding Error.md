@@ -59,13 +59,13 @@ Monday, July 20, 2020
 
    `export-clixml CTAN_dupeMB_0720.xml` 
 
-   ``for (\$i=0; \$i -lt \$dupes.Count; \$i++)`
+   `for (\$i=0; \$i -lt \$dupes.Count; \$i++)`
 
-   ``{`
+   `{`
 
    `\$upn = \$dupes\[\$i\].Name + \"\@carentancasino.com\"`
 
-   ``Remove-MsolUser -UserPrincipalName \$upn -Force:\$true`
+   `Remove-MsolUser -UserPrincipalName \$upn -Force:\$true`
 
    `Remove-MsolUser -UserPrincipalName \$upn -RemoveFromRecycleBin -Force:\$true`
 
