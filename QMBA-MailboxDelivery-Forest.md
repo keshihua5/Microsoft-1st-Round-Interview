@@ -32,16 +32,16 @@ A **Geneva dashboard** (which provides current and recent historical views of th
 
 ## Possible Root Causes
 
-1.  **Hot delivery, single delivery server has an issue.**  
+1.  **Hot delivery, single delivery server has an issue**  
     All queued messages target the same delivery server.
 
-2.  **Hot hub, single hub server cannot send messages; probable Auth issue.**  
+2.  **Hot hub, single hub server cannot send messages; probable Auth issue**  
     All queued messages are in the same hub server.
 
-3.  **Scattered hub and scattered delivery.**  
+3.  **Scattered hub and scattered delivery**  
     Some  messages have  patterns queued.
 
-4.  **Networking failure, café failure**.
+4.  **Networking failure, café failure**
 
 ## Diagnose and Recover
 
@@ -52,13 +52,13 @@ A **Geneva dashboard** (which provides current and recent historical views of th
     a.  If the script points to a single delivery server, remove the mailbox database for that delivery server.
 
     b.  Run **`check-deliveryhealth.sp1`**, in the \"MDB Health Summary\" session.
-     If the a mdb\'s **MDBHealth** is low and **WorestREsource** is DiskLatency - **contact the HA team**. During the **MDB Throttling Summary** session, if many messages are throttled by Disklatency - **contact the HA team**.
+     If the a mdb **MDBHealth** is low and **WorestREsource** is DiskLatency - **contact the HA team**. During the **MDB Throttling Summary** session, if many messages are throttled by Disklatency - **contact the HA team**.
 
     c. Check the **delivery server provision status**, to see if delivery server is in MM - but  still has mdb mounted.
 
     d.  You can refer this playbook ([HttpDeliveryAvailabilityV2Monitor](onenote:#HttpDeliveryAvailabilityV2Monitor&section-id={F0A9DD2C-8D88-4246-9561-12B4E91CFA0A}&page-id={AF6CA10D-662C-41AA-B2F0-6E94B741AFAC}&end&base-path=https://microsoft.sharepoint-df.com/teams/O365TransportTeam/SiteAssets/O365%20Transport%20Team%20Notebook/Alert%20Playbook.one)) to diagnose single delivery issue.
 
-3. **`Diagnose-QRBA.ps1` ** **cannot run** in an **ITAR** environment. **Contact Escort**  to run the following commands to locate the hot delivery server:
+3. **`Diagnose-QRBA.ps1`** **cannot run** in an **ITAR** environment. **Contact Escort**  to run the following commands to locate the hot delivery server:
 
    `Get-QueueDiversityV2 -forest //It will list top target mdb-\> \$mdbGuid`
 
