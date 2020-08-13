@@ -57,16 +57,16 @@ This monitor targets a specific **Dag/EXO forest/EOP orest**. An alert is raised
 
 ## Possible Root Causes
 
-1.  **GLS issue**  
+- **GLS issue**  
     Cannot attribute mail because GLS is not accessible or monitoring tenant cannot not be found in GLS.
 
-2.  **Networking issue**  
+- **Networking issue**  
     Cannot resolve tenant MX (DNS++ issue), VIP not configured correctly, connectivity issues between Azure instance, EOP FD, EXO Café and/or EXO hub, etc.
 
-3.  **Certificate issues**  
+- **Certificate issues**  
     Wrong or expired certificate, monitoring mailbox not provisioned/configured correctly.
 
-4.  **Transport issues**  
+- **Transport issues**  
     EOP FD, EXO Café or hub are too busy or in a bad state (i.e., crashing/hanging), or there is a  code bug in any of these transport components.
 
 ## Link To OSP
