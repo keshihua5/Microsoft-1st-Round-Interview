@@ -23,7 +23,6 @@ Monday, July 20, 2020
 ## Fix For Large Group Of Users: 
 
 > Note This example is for a carentan machine\.
->
 
 1. Connect the on-prem machine.
 
@@ -77,7 +76,7 @@ Monday, July 20, 2020
 
    `\$gmb = get-mailbox -Resultsize Unlimited \| ?{\$\_.Name -match \'ctantest\'}`
 
-   ``\$dupes = \$gmb \| ?{\$\_.Name -in \$onpremMB.onpremMB}` 
+   `\$dupes = \$gmb \| ?{\$\_.Name -in \$onpremMB.onpremMB}` 
 
    `\$dupes.Count`
 
