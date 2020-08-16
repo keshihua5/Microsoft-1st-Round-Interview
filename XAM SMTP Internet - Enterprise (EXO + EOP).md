@@ -100,7 +100,7 @@ See [Outside-In probe prominent failure reason](https://msft.spoppe.com/collab/t
    
    [Understand Outside-In Class of Failures](https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Understand%20Outside-In%20Class%20of%20Failures&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={080E02F8-A55A-4EAC-8701-C909A5D90CA4}&end)
    
-2. Retreive probe smtp sessions from protocol logs,
+2. Retreive probe smtp sessions from protocol logs.
 
    - After identifying the major failure areas, choose one error (from OSP) to get the protocol logs
      - Use Ehlo domain used for the probe
