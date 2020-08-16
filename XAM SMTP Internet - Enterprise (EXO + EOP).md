@@ -94,7 +94,7 @@ See [Outside-In probe prominent failure reason](onenote:https://msft.spoppe.com/
      
 
 **Mitigation steps and description of each failure reason / error type / smtp response**.  
-Once you\'ve determined the failure reason / error type, see the following pages for added information on the error type.
+Once you\'ve determined the failure reason / error type, see the following pages for added   information on the error type.
      
 [Common Outside In SMTP Probe Failures](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/E15%20Alert%20Playbook.one#Common%20Outside%20In%20SMTP%20Probe%20Failures&section-id={24B57828-2A06-42C5-99C0-37E103E281E0}&page-id={BA12E5C0-D8F3-49F8-ACB4-D55F08B53513}&end)
      
