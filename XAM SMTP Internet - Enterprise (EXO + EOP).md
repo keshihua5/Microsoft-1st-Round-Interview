@@ -95,8 +95,9 @@ See [Outside-In probe prominent failure reason](onenote:https://msft.spoppe.com/
    
    **Mitigation steps and description of each failure reason / error type / smtp response**.  
    Once you\'ve determined the failure reason / error type, see the following pages for added   information on the error type.
-   [Common Outside In SMTP Probe Failures](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/E15%20Alert%20Playbook.one#Common%20Outside%20In%20SMTP%20Probe%20Failures&section-id={24B57828-2A06-42C5-99C0-37E103E281E0}&page-id={BA12E5C0-D8F3-49F8-ACB4-D55F08B53513}&end)
-   [Understand Outside-In Class of Failures](onenote:https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Understand%20Outside-In%20Class%20of%20Failures&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={080E02F8-A55A-4EAC-8701-C909A5D90CA4}&end)
+   [Common Outside In SMTP Probe Failures](https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/E15%20Alert%20Playbook.one#Common%20Outside%20In%20SMTP%20Probe%20Failures&section-id={24B57828-2A06-42C5-99C0-37E103E281E0}&page-id={BA12E5C0-D8F3-49F8-ACB4-D55F08B53513}&end)
+   
+   [Understand Outside-In Class of Failures](https://msft.spoppe.com/collab/transportalerts/SiteAssets/Transport%20Alert%20Pulse%20Notebook/On-Call%20Notes.one#Understand%20Outside-In%20Class%20of%20Failures&section-id={C84CBF30-BD89-4D02-A63C-D66A3C8403E0}&page-id={080E02F8-A55A-4EAC-8701-C909A5D90CA4}&end)
    
 2. Retreive probe smtp sessions from protocol logs,
 
