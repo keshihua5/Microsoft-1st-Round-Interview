@@ -92,9 +92,9 @@ Do the following steps:
    a.  Check messages in the delivery queue.  
 Check the last error to see if queued messages have patterns .
    
-`Get-QueueDiversityV2 -Forest -Priority normal -QueueFilter {DeliveryType -eq \'HttpDeliveryToExo\'} -MinMessageLatency \"01:00:00\"`
+   `Get-QueueDiversityV2 -Forest -Priority normal -QueueFilter {DeliveryType -eq \'HttpDeliveryToExo\'} -MinMessageLatency \"01:00:00\"`
    
-b.  Check delivery [hang dashboard](<https://jarvis-west.dc.ad.msft.net/dashboard/O365_Transport/MailboxTransport/Delivery/DeliveryHangException>), to see in the alerting forest delivery hang status. If hang exception increases a lot, it may cause other normal messages to queue. 
+   b.  Check delivery [hang dashboard](<https://jarvis-west.dc.ad.msft.net/dashboard/O365_Transport/MailboxTransport/Delivery/DeliveryHangException>), to see in the alerting forest delivery hang status. If hang exception increases a lot, it may cause other normal messages to queue. 
    
    Contact another team based on hang call stack. Mitigation maybe drop messages that cause the delivery to hang.
    
