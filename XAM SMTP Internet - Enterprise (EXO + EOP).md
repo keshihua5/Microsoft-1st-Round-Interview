@@ -77,7 +77,7 @@ This monitor targets a specific **Dag/EXO forest/EOP orest**. An alert is raised
 
 ## Diagnose and Recover
 
-1. Determine prominent failure reason (Error Type) and Smtp error responses
+1. Determine prominent failure reason (Error Type) and Smtp error responses.
 
    - Check the bottom of the alert mail table to find the major cause of failure (prominent error type) or OSP page link in email
    - Identify the components involved in the failure. for example:
